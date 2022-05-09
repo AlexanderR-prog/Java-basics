@@ -190,8 +190,7 @@ async function getResponce() {
 
   for(key in content) {
     list.innerHTML += `
-  <li class="block-star">
-    <img src="${content[key].url}" width="150px">
+  <li class="block-star" background-color="${content[key].url}" width="150px">
     <span class="star-text">
     ${content[key].title}
     </span>
