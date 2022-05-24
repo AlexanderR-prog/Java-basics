@@ -195,7 +195,7 @@ function changeBackgroundColor() {
     }
 }
 
-
+// Скрываем картинку
 
 function togFunc(id) {
 
@@ -235,6 +235,24 @@ btn.addEventListener('click', function () {
             btn.innerHTML = 'С картинкой';
 })
 
+// Меняем положение элементов
+
+function togFlex(classname, state) {
+    elem = document.getElementsByClassName('page-blocks')[0];
+    elem.style.flexDirection = state;
+}
+
+const flex = document.querySelector('.flex');
+flex.addEventListener('click', function () {
+    if(flex.innerHTML === 'По вертикали'){
+      flex.innerHTML = 'По горизонтали';
+      togFlex('page-blocks', 'column');
+    }
+    else{
+      flex.innerHTML = 'По вертикали';
+      togFlex('page-blocks', 'row');
+  }
+})
 
 
 
